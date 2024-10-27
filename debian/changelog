@@ -1,3 +1,85 @@
+dtk6widget (6.0.19) unstable; urgency=medium
+
+  * sync: from linuxdeepin/dtkwidget
+
+ -- Deepin Packages Builder <packages@deepin.org>  Wed, 21 Aug 2024 02:41:05 +0000
+
+dtk6widget (6.0.18) unstable; urgency=medium
+
+  * sync: from linuxdeepin/dtkwidget
+  * sync: from linuxdeepin/dtkwidget
+  * sync: from linuxdeepin/dtkwidget
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 08 Jul 2024 02:36:19 +0000
+
+dtk6widget (6.0.17) unstable; urgency=medium
+
+  [ root ]
+  * UNRELEASED
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 24 Jun 2024 05:35:02 +0000
+
+dtk6widget (6.0.16) unstable; urgency=medium
+
+  * 6.0.16
+
+ -- Mike Chen <chenke@deepin.org>  Mon, 13 May 2024 13:25:40 +0800
+
+dtk6widget (6.0.15) unstable; urgency=medium
+
+  * 6.0.15
+
+ -- YeShanShan <yeshanshan@deepin.org>  Mon, 29 Apr 2024 16:16:14 +0800
+
+dtk6widget (6.0.14) unstable; urgency=medium
+
+  * 6.0.14
+
+ -- YeShanShan <yeshanshan@deepin.org>  Sun, 28 Apr 2024 13:26:13 +0800
+
+dtk6widget (6.0.13) unstable; urgency=medium
+
+  * 6.0.13
+
+ -- YeShanShan <yeshanshan@deepin.org>  Fri, 26 Apr 2024 15:15:57 +0800
+
+dtk6widget (6.0.13) unstable; urgency=medium
+
+  * 6.0.13
+
+ -- YeShanShan <yeshanshan@deepin.org>  Thu, 25 Apr 2024 16:31:30 +0800
+
+dtk6widget (6.0.12) unstable; urgency=medium
+
+  * 6.0.12
+
+ -- YeShanShan <yeshanshan@deepin.org>  Tue, 23 Apr 2024 11:35:41 +0800
+
+dtk6widget (6.0.11) unstable; urgency=medium
+
+  * 6.0.11
+
+ -- Mike Chen <chenke@deepin.org>  Wed, 17 Apr 2024 17:25:53 +0800
+
+dtk6widget (6.0.10) unstable; urgency=medium
+
+  * 6.0.10
+
+ -- YeShanShan <yeshanshan@deepin.org>  Thu, 11 Apr 2024 11:44:35 +0800
+
+dtk6widget (6.0.9) unstable; urgency=medium
+
+  * sync: from linuxdeepin/dtkwidget
+  * chore: disable broken workflow
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 01 Apr 2024 14:47:27 +0800
+
+dtk6widget (6.0.8) unstable; urgency=medium
+
+  * 6.0.8
+
+ -- Wang Fei <wangfei@deepin.org>  Tue, 05 Mar 2024 16:07:01 +0800
+
 dtk6widget (6.0.4) unstable; urgency=medium
 
   * 6.0.4
