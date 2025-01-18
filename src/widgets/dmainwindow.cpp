@@ -24,6 +24,7 @@
 #include <qwidgetaction.h>
 #include <QScreen>
 
+#include <DWindowManagerHelper>
 #include <DAnchors>
 #include <DConfig>
 
@@ -42,12 +43,8 @@ DMainWindowPrivate::DMainWindowPrivate(DMainWindow *qq)
 {
     titlebar = new DTitlebar(qq);
     titlebar->setAccessibleName("DMainWindowTitlebar");
-    auto noTitlebarEnabled = []{
-        QFunctionPointer enableNoTitlebar = qApp->platformFunction("_d_isEnableNoTitlebar");
-        bool enabled = qApp->platformName() == "dwayland" || qApp->property("_d_isDwayland").toBool();
-        return enabled && enableNoTitlebar != nullptr;
-    };
-    if (DApplication::isDXcbPlatform() || noTitlebarEnabled()) {
+
+    if (DApplication::isDXcbPlatform() || DWindowManagerHelper::instance()->hasNoTitlebar()) {
         handle = new DPlatformWindowHandle(qq, qq);
         qq->setMenuWidget(titlebar);
     } else {

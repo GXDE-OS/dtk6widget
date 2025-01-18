@@ -13,6 +13,8 @@
 #include "dstyleditemdelegate.h"
 #include "dstyle.h"
 
+#include <DBounceAnimation>
+
 DWIDGET_BEGIN_NAMESPACE
 
 DVariantListModel::DVariantListModel(QObject *parent) :
@@ -196,6 +198,11 @@ DListView::DListView(QWidget *parent) :
     DObject(*new DListViewPrivate(this))
 {
     d_func()->init();
+    if (ENABLE_ANIMATIONS && ENABLE_ANIMATION_SEARCH) {
+        auto ani = new DBounceAnimation(this);
+        ani->setAnimationTarget(this);
+        ani->setAniMationEnable(true);
+    }
 }
 
 /*!

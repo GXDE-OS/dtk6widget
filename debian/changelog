@@ -1,3 +1,57 @@
+dtk6widget (6.0.28) unstable; urgency=medium
+
+  * 6.0.28
+
+ -- YeShanShan <yeshanshan@deepin.org>  Tue, 14 Jan 2025 19:18:15 +0800
+
+dtk6widget (6.0.27) unstable; urgency=medium
+
+  * 6.0.27
+
+ -- YeShanShan <yeshanshan@deepin.org>  Thu, 09 Jan 2025 19:17:04 +0800
+
+dtk6widget (6.0.26) unstable; urgency=medium
+
+  * 6.0.26
+
+ -- YeShanShan <yeshanshan@deepin.org>  Thu, 02 Jan 2025 15:13:26 +0800
+
+dtk6widget (6.0.25) unstable; urgency=medium
+
+  * 6.0.25
+
+ -- Wang Fei <wangfei@deepin.org>  Fri, 13 Dec 2024 13:27:46 +0800
+
+dtk6widget (6.0.24.1) unstable; urgency=medium
+
+  * release 6.0.24.1
+
+ -- Mike Chen <chenke@deepin.org>  Mon, 09 Dec 2024 18:40:59 +0800
+
+dtk6widget (6.0.24) unstable; urgency=medium
+
+  * 6.0.24
+
+ -- Wang Fei <wangfei@deepin.org>  Wed, 04 Dec 2024 10:26:30 +0800
+
+dtk6widget (6.0.23) unstable; urgency=medium
+
+  * 6.0.23
+
+ -- Wang Fei <wangfei@deepin.org>  Wed, 20 Nov 2024 16:44:48 +0800
+
+dtk6widget (6.0.22) unstable; urgency=medium
+
+  * 6.0.22
+
+ -- Wang Fei <wangfei@deepin.org>  Wed, 13 Nov 2024 16:09:19 +0800
+
+dtk6widget (6.0.21) unstable; urgency=medium
+
+  * 6.0.21
+
+ -- Wang Fei <wangfei@deepin.org>  Wed, 25 Sep 2024 15:09:01 +0800
+
 dtk6widget (6.0.19) unstable; urgency=medium
 
   * sync: from linuxdeepin/dtkwidget

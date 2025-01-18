@@ -53,7 +53,7 @@ DWIDGET_BEGIN_NAMESPACE
 #define GETSUPPORTSPLITWINDOW_VAR "_d_supportForSplittingWindow"
 
 static inline int DefaultIconHeight() { return DSizeModeHelper::element(24, 32); }
-static inline int DefaultExpandButtonHeight() { return DSizeModeHelper::element(30, 48); }
+static inline int DefaultExpandButtonHeight() { return DSizeModeHelper::element(48, 48); }
 
 class DTitlebarPrivate : public DTK_CORE_NAMESPACE::DObjectPrivate
 {
@@ -79,6 +79,7 @@ private:
     void _q_toggleWindowState();
     void _q_showMinimized();
     void _q_onTopWindowMotifHintsChanged(quint32 winId);
+    void _q_closeWindow();
 
 #ifndef QT_NO_MENU
     void _q_addDefaultMenuItems();
@@ -163,7 +164,7 @@ private:
     QAction             *darkThemeAction  = nullptr;
 #endif
 
-    QWindow            *targetWindowHandle = Q_NULLPTR;
+    QPointer<QWindow>            targetWindowHandle;
 
     Qt::WindowFlags     disableFlags;
     bool                mousePressed    = false;
@@ -354,6 +355,10 @@ void DTitlebarPrivate::init()
     q->setFocusPolicy(Qt::StrongFocus);
 
     auto noTitlebarEnabled = []{
+        if (DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+            return true;
+        }
+
         QFunctionPointer enableNoTitlebar = qApp->platformFunction("_d_isEnableNoTitlebar");
         bool enabled = qApp->platformName() == "dwayland" || qApp->property("_d_isDwayland").toBool();
         return enabled && enableNoTitlebar != nullptr;
@@ -427,7 +432,8 @@ void DTitlebarPrivate::updateFullscreen()
 void DTitlebarPrivate::updateButtonsState(Qt::WindowFlags type)
 {
     D_Q(DTitlebar);
-    bool useDXcb = DPlatformWindowHandle::isEnabledDXcb(targetWindow());
+    bool useDXcb = DPlatformWindowHandle::isEnabledDXcb(targetWindow()) ||
+                   DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform);
     bool isFullscreen = targetWindow()->windowState().testFlag(Qt::WindowFullScreen);
 
 //    bool forceShow = !useDXcb;
@@ -564,6 +570,13 @@ void DTitlebarPrivate::_q_toggleWindowState()
     } else if (!parentWindow->isFullScreen()
                && (maxButton->isVisible())) {
         parentWindow->showMaximized();
+    }
+}
+
+void DTitlebarPrivate::_q_closeWindow()
+{
+    if (targetWindow()->windowHandle()) {
+        targetWindow()->windowHandle()->close();
     }
 }
 
@@ -1104,7 +1117,7 @@ bool DTitlebar::eventFilter(QObject *obj, QEvent *event)
         switch (event->type()) {
         case QEvent::ShowToParent:
             d->handleParentWindowIdChange();
-            d->updateButtonsState(d->targetWindow()->windowFlags());
+            d->handleParentWindowStateChange();
             break;
         case QEvent::Resize:
             if (d->autoHideOnFullscreen) {
@@ -1528,7 +1541,7 @@ void DTitlebar::setVisible(bool visible)
         connect(d->maxButton, SIGNAL(clicked()), this, SLOT(_q_toggleWindowState()), Qt::UniqueConnection);
         connect(this, SIGNAL(doubleClicked()), this, SLOT(_q_toggleWindowState()), Qt::UniqueConnection);
         connect(d->minButton, SIGNAL(clicked()), this, SLOT(_q_showMinimized()), Qt::UniqueConnection);
-        connect(d->closeButton, &DWindowCloseButton::clicked, d->targetWindow(), &QWidget::close, Qt::UniqueConnection);
+        connect(d->closeButton, SIGNAL(clicked()), this, SLOT(_q_closeWindow()), Qt::UniqueConnection);
 
         d->updateButtonsState(d->targetWindow()->windowFlags());
     } else {
