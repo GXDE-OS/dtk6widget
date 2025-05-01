@@ -1301,7 +1301,10 @@ void DStyle::drawPrimitive(const QStyle *style, DStyle::PrimitiveElement pe, con
 
             p->setRenderHint(QPainter::Antialiasing);
             p->setPen(Qt::NoPen);
-            p->setBrush(dstyle.getColor(opt, QPalette::Button));
+            // SwitchButton用在透明窗口上底色太亮，很突兀，用带有透明度的黑色和白色替代
+            QColor color = DGuiApplicationHelper::instance()->themeType() == DGuiApplicationHelper::DarkType ? Qt::white : Qt::black;
+            color.setAlphaF(0.2);
+            p->setBrush(color);
             p->drawRoundedRect(rectGroove, frame_radius, frame_radius);
         }
         break;
@@ -2037,7 +2040,10 @@ int DStyle::styleHint(QStyle::StyleHint sh, const QStyleOption *opt, const QWidg
     case SH_ScrollView_FrameOnlyAroundContents:
         return false;
     case SH_LineEdit_PasswordCharacter:
-        return 0x26AB;
+        if (w && QFontMetrics(w->font()).inFont(QChar(0x26AB)))
+            return 0x26AB;
+
+	return 0x25CF;
     default:
         break;
     }
