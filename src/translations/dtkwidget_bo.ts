@@ -718,7 +718,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="395"/>
         <source>open-source software</source>
-        <translation>སྒོ་འབྱེད་མཉེན་ཆས།</translation>
+        <translation>སྒོ་འབྱེད་མཉེན་ཆས་</translation>
     </message>
     <message>
         <location filename="../widgets/dfeaturedisplaydialog.cpp" line="151"/>

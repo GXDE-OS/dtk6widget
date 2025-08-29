@@ -107,7 +107,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dinputdialog.cpp" line="29"/>
         <source>Cancel</source>
-        <translation>Odustani</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../widgets/dinputdialog.cpp" line="30"/>
@@ -574,7 +574,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dsettingswidgetfactory.cpp" line="65"/>
         <source>Cancel</source>
-        <translation>Odustani</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <location filename="../widgets/dsettingswidgetfactory.cpp" line="66"/>

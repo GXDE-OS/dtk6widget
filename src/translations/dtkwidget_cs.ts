@@ -584,7 +584,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dsettingswidgetfactory.cpp" line="68"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation>Tato klávesová zkratka se střetává s %1. Aby začala platit, klepněte na Přidat</translation>
+        <translation>Tato klávesová zkratka koliduje s %1. Aby začala platit, klikněte na Přidat</translation>
     </message>
 </context>
 <context>
@@ -659,7 +659,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dlineedit.cpp" line="526"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopírovat</translation>
+        <translation>&amp;Zkopírovat</translation>
     </message>
     <message>
         <location filename="../widgets/dlineedit.cpp" line="529"/>
@@ -697,12 +697,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="122"/>
         <source>Homepage</source>
-        <translation>Hlavní stránka</translation>
+        <translation>Domovská stránka</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="124"/>
         <source>Description</source>
-        <translation>Popisek</translation>
+        <translation>Popis</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="126"/>
@@ -713,17 +713,17 @@ SPDX-License-Identifier: LGPL-3.0-or-later
         <location filename="../widgets/daboutdialog.cpp" line="128"/>
         <location filename="../widgets/daboutdialog.cpp" line="393"/>
         <source>Sincerely appreciate the open-source software used.</source>
-        <translation type="unfinished"/>
+        <translation>Upřímně oceňuje použitý open source software.</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="395"/>
         <source>open-source software</source>
-        <translation type="unfinished"/>
+        <translation>open source software</translation>
     </message>
     <message>
         <location filename="../widgets/dfeaturedisplaydialog.cpp" line="151"/>
         <source>Continue</source>
-        <translation>Další</translation>
+        <translation>Pokračovat</translation>
     </message>
     <message>
         <location filename="../widgets/dfeaturedisplaydialog.cpp" line="175"/>
@@ -733,7 +733,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dlicensedialog.cpp" line="78"/>
         <source>Open-Source Software</source>
-        <translation type="unfinished"/>
+        <translation>Open source software</translation>
     </message>
 </context>
 <context>
@@ -757,7 +757,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="634"/>
         <source>Theme</source>
-        <translation>Vzhled</translation>
+        <translation>Motiv vzhledu</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="636"/>
@@ -787,7 +787,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="683"/>
         <source>Custom toolbar</source>
-        <translation>Vlastní panel nástrojů</translation>
+        <translation>Uživatelsky určený panel nástrojů</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="691"/>

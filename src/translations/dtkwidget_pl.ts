@@ -210,12 +210,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="422"/>
         <source>Portrait</source>
-        <translation>Pionowo</translation>
+        <translation>Portret</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="432"/>
         <source>Landscape</source>
-        <translation>Poziomo</translation>
+        <translation>Krajobraz</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="460"/>
@@ -396,7 +396,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="834"/>
         <source>Text watermark</source>
-        <translation>Tekst jako znak wodny</translation>
+        <translation>Tekstowy znak wodny</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="838"/>
@@ -501,7 +501,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="1467"/>
         <source>Input English comma please</source>
-        <translation>Wprowadź Angielski przecinek</translation>
+        <translation>Wprowadź angielski przecinek</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="1470"/>
@@ -522,7 +522,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="1770"/>
         <source>For example, 1,3,5-7,11-15,18,21</source>
-        <translation>Na przykład, 1,3,5-7,11-15,18,21</translation>
+        <translation>Na przykład: 1,3,5-7,11-15,18,21</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="2312"/>

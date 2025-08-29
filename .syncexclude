@@ -9,3 +9,5 @@
 # are always ignored
 linglong.yaml
 conanfile.py
+VERSION
+CHANGELOG.md

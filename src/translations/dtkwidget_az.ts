@@ -733,7 +733,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dlicensedialog.cpp" line="78"/>
         <source>Open-Source Software</source>
-        <translation type="unfinished"/>
+        <translation>Açıq qaynaq proqram təminatı</translation>
     </message>
 </context>
 <context>

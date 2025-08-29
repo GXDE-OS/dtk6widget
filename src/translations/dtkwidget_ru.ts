@@ -29,7 +29,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="875"/>
         <source>Dark Gray</source>
-        <translation>Темно-Серый</translation>
+        <translation>Темно-серый</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="878"/>
@@ -39,7 +39,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="881"/>
         <source>Light Gray</source>
-        <translation>Светло-Серый</translation>
+        <translation>Светло-серый</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="884"/>
@@ -74,32 +74,32 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="902"/>
         <source>Dark Red</source>
-        <translation>Темно-Красный</translation>
+        <translation>Темно-красный</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="905"/>
         <source>Dark Green</source>
-        <translation>Темно-Зеленый</translation>
+        <translation>Темно-зеленый</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="908"/>
         <source>Dark Blue</source>
-        <translation>Темно-Синий</translation>
+        <translation>Темно-синий</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="911"/>
         <source>Dark Cyan</source>
-        <translation>Темно-Голубой</translation>
+        <translation>Темно-голубой</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="914"/>
         <source>Dark Magenta</source>
-        <translation>Темно-Пурпурный</translation>
+        <translation>Темно-пурпурный</translation>
     </message>
     <message>
         <location filename="../widgets/dcrumbedit.cpp" line="917"/>
         <source>Dark Yellow</source>
-        <translation>Темно-Желтый</translation>
+        <translation>Темно-желтый</translation>
     </message>
 </context>
 <context>
@@ -210,12 +210,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="422"/>
         <source>Portrait</source>
-        <translation>Портрет</translation>
+        <translation>Книжная</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="432"/>
         <source>Landscape</source>
-        <translation>Ландшафт</translation>
+        <translation>Альбомная</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="460"/>
@@ -316,7 +316,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="641"/>
         <source>Print Layout</source>
-        <translation>Макет Печати</translation>
+        <translation>Макет печати</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="655"/>
@@ -376,12 +376,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="750"/>
         <source>Front to back</source>
-        <translation>С лицевой стороны обратно</translation>
+        <translation>От лицевой к задней</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="750"/>
         <source>Back to front</source>
-        <translation> С обратной стороны на лицевую</translation>
+        <translation> От задней к лицевой</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="774"/>
@@ -527,7 +527,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="2312"/>
         <source>Save as PDF</source>
-        <translation>Сохранить в PDF</translation>
+        <translation>Сохранить как PDF</translation>
     </message>
     <message>
         <location filename="../widgets/dprintpreviewdialog.cpp" line="2351"/>
@@ -628,17 +628,17 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/private/dtitlebareditpanel.cpp" line="884"/>
         <source>Default toolset</source>
-        <translation type="unfinished"/>
+        <translation>Набор инструментов по умолчанию</translation>
     </message>
     <message>
         <location filename="../widgets/private/dtitlebareditpanel.cpp" line="915"/>
         <source>Drag your favorite items into the toolbar</source>
-        <translation type="unfinished"/>
+        <translation>Перетащите ваши любимые элементы на панель инструментов</translation>
     </message>
     <message>
         <location filename="../widgets/private/dtitlebareditpanel.cpp" line="916"/>
         <source>Drag below items into the toolbar to restore defaults</source>
-        <translation type="unfinished"/>
+        <translation>Перетащите указанные ниже элементы на панель инструментов, чтобы восстановить значения по умолчанию.</translation>
     </message>
     <message>
         <location filename="../widgets/private/dtitlebareditpanel.cpp" line="921"/>
@@ -682,7 +682,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/private/settings/content.cpp" line="330"/>
         <source>Restore Defaults</source>
-        <translation>Восстановить значения По-умолчанию</translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="108"/>
@@ -713,12 +713,12 @@ SPDX-License-Identifier: LGPL-3.0-or-later
         <location filename="../widgets/daboutdialog.cpp" line="128"/>
         <location filename="../widgets/daboutdialog.cpp" line="393"/>
         <source>Sincerely appreciate the open-source software used.</source>
-        <translation type="unfinished"/>
+        <translation>Искренне благодарим за использование программного обеспечения с открытым исходным кодом.</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="395"/>
         <source>open-source software</source>
-        <translation type="unfinished"/>
+        <translation>программное обеспечение с открытым исходным кодом</translation>
     </message>
     <message>
         <location filename="../widgets/dfeaturedisplaydialog.cpp" line="151"/>
@@ -733,7 +733,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dlicensedialog.cpp" line="78"/>
         <source>Open-Source Software</source>
-        <translation type="unfinished"/>
+        <translation>Программное обеспечение с открытым исходным кодом</translation>
     </message>
 </context>
 <context>
@@ -762,17 +762,17 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="636"/>
         <source>Light Theme</source>
-        <translation>Светлая Тема</translation>
+        <translation>Светлая тема</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="637"/>
         <source>Dark Theme</source>
-        <translation>Темная Тема</translation>
+        <translation>Темная тема</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="638"/>
         <source>System Theme</source>
-        <translation>Тема Системы</translation>
+        <translation>Тема системы</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="668"/>
@@ -787,7 +787,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="683"/>
         <source>Custom toolbar</source>
-        <translation type="unfinished"/>
+        <translation>Пользовательская панель инструментов</translation>
     </message>
     <message>
         <location filename="../widgets/dtitlebar.cpp" line="691"/>

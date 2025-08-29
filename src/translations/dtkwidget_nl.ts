@@ -112,7 +112,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/dinputdialog.cpp" line="30"/>
         <source>Confirm</source>
-        <translation>Oké</translation>
+        <translation>Bevestigen</translation>
     </message>
 </context>
 <context>

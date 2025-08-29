@@ -83,6 +83,7 @@ DWIDGET_END_NAMESPACE
 Q_DECLARE_METATYPE(DTK_WIDGET_NAMESPACE::ActionList)
 
 DWIDGET_BEGIN_NAMESPACE
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 static void saveDViewItemActionList(QDataStream &s, const void *d)
 {
     const ActionList &data = *static_cast<const ActionList*>(d);
@@ -95,16 +96,17 @@ static void loadDViewItemActionList(QDataStream &s, void *d)
     s >> data;
 }
 
-__attribute__((constructor))
 static void registerMetaType ()
 {
-    #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     // register DViewItemActionList's stream operator to support that QMetaType can using save and load function.
     QMetaType::registerStreamOperators(QMetaTypeId<DTK_WIDGET_NAMESPACE::ActionList>::qt_metatype_id(),
                                        saveDViewItemActionList,
                                        loadDViewItemActionList);
-    #endif
 }
+
+Q_CONSTRUCTOR_FUNCTION(registerMetaType)
+
+#endif
 
 static DViewItemActionList qvariantToActionList(const QVariant &v)
 {
@@ -490,7 +492,7 @@ public:
         if (lastWidgets.isEmpty() && currentWidgets.isEmpty())
             return;
 
-        for (const auto &widget : qAsConst(lastWidgets)) {
+        for (const auto &widget : std::as_const(lastWidgets)) {
             if (currentWidgets.contains(widget))
                 continue;
             if (widget && widget->isVisible())
@@ -516,10 +518,17 @@ public:
         }
     }
 
+    inline int spacing() const
+    {
+        if (itemSpacing < 0) 
+            return 0;
+        return itemSpacing;
+    }
+
     DStyledItemDelegate::BackgroundType backgroundType = DStyledItemDelegate::NoBackground;
     QMargins margins;
     QSize itemSize;
-    int itemSpacing = 0;
+    int itemSpacing = -1;
     QMap<QModelIndex, QList<QPair<QAction*, QRect>>> clickableActionMap;
     QAction *pressedAction = nullptr;
     QList<QPointer<QWidget>> lastWidgets;
@@ -1176,9 +1185,9 @@ QSize DStyledItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     const QListView * lv = qobject_cast<const QListView*>(option.widget);
     if (lv) {
         if (lv->flow() == QListView::LeftToRight) {
-            size.rwidth() += d->itemSpacing;
+            size.rwidth() += d->spacing();
         } else {
-            size.rheight() += d->itemSpacing;
+            size.rheight() += d->spacing();
         }
     }
 
@@ -1353,9 +1362,9 @@ void DStyledItemDelegate::initStyleOption(QStyleOptionViewItem *option, const QM
     const QListView * lv = qobject_cast<const QListView*>(option->widget);
     if (lv) {
         if (lv->flow() == QListView::LeftToRight) {
-            option->rect.adjust(0, 0, 0 - d->itemSpacing, 0);
+            option->rect.adjust(0, 0, 0 - d->spacing(), 0);
         } else {
-            option->rect.adjust(0, 0, 0, 0 - d->itemSpacing);
+            option->rect.adjust(0, 0, 0, 0 - d->spacing());
         }
         if (lv->window() && lv->window()->isActiveWindow()) {
             option->state |= QStyle::State_Active;

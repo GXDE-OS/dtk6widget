@@ -1,3 +1,54 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [6.0.41] - 2025-08-14
+
+### Changed
+
+- From linuxdeepin/dtkwidget
+- From linuxdeepin/dtkwidget
+- From linuxdeepin/dtkwidget
+- From linuxdeepin/dtkwidget
+- From linuxdeepin/dtkwidget
+
+## [6.0.40] - 2025-07-31
+
+### Added
+
+- Add debian check workflow
+
+### Changed
+
+- From linuxdeepin/dtkwidget
+- From linuxdeepin/dtkwidget
+
+## [6.0.39] - 2025-07-03
+
+### Added
+
+- Add security hardening flags to build configuration
+
+### Changed
+
+- From linuxdeepin/dtkwidget
+
+## [6.0.38] - 2025-06-27
+
+### Changed
+
+- Update workflow and remove rpm spec file
+
+## [6.0.37] - 2025-06-19
+
+### Changed
+
+- Support VERSION file and auto release (#142)
+- From linuxdeepin/dtkwidget
+
 <a name="2.0.14"></a>
 ## 2.0.14 (2019-05-23)
 

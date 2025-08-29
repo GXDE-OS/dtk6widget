@@ -707,7 +707,7 @@ SPDX-License-Identifier: LGPL-3.0-or-later
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="126"/>
         <source>Acknowledgements</source>
-        <translation>鳴謝</translation>
+        <translation>致謝</translation>
     </message>
     <message>
         <location filename="../widgets/daboutdialog.cpp" line="128"/>
