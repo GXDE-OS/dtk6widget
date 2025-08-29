@@ -36,6 +36,7 @@ Package: libdtk6widget
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
 Multi-Arch: same
+Recommends: dde-qt6integration
 Description: deepin graphical user interface library
  DtkWidget is deepin graphical user interface for deepin desktop development.
  .
