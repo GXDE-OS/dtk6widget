@@ -44,7 +44,11 @@ DMainWindowPrivate::DMainWindowPrivate(DMainWindow *qq)
     titlebar = new DTitlebar(qq);
     titlebar->setAccessibleName("DMainWindowTitlebar");
 
-    if (DApplication::isDXcbPlatform() || DWindowManagerHelper::instance()->hasNoTitlebar()) {
+    if (DApplication::isDXcbPlatform() || DWindowManagerHelper::instance()->hasNoTitlebar() ||
+        DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+        if (DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+            qq->setWindowFlag(Qt::FramelessWindowHint);
+        }
         handle = new DPlatformWindowHandle(qq, qq);
         qq->setMenuWidget(titlebar);
     } else {

@@ -69,7 +69,16 @@ void DAbstractDialogPrivate::init(bool blurIfPossible)
         }
 
         // fix wayland no titlebar
-        //q->setWindowFlags(q->windowFlags() | Qt::FramelessWindowHint);
+        q->setWindowFlag(Qt::FramelessWindowHint);
+        q->windowHandle()->setProperty("_d_enableSystemResize", false);
+    } else if (DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+        handle = new DPlatformWindowHandle(q, q);
+
+        if (!handle->enableBlurWindow()) {
+            handle->setEnableBlurWindow(true);
+        }
+
+        q->setWindowFlag(Qt::FramelessWindowHint);
         q->windowHandle()->setProperty("_d_enableSystemResize", false);
     }
 

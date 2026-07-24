@@ -1552,6 +1552,27 @@ void DTitlebar::setVisible(bool visible)
         connect(d->minButton, SIGNAL(clicked()), this, SLOT(_q_showMinimized()), Qt::UniqueConnection);
         connect(d->closeButton, SIGNAL(clicked()), this, SLOT(_q_closeWindow()), Qt::UniqueConnection);
 
+        if (!d->embedMode && DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+            if (!d->iconLabel->isVisible()) {
+                QIcon windowIcon = d->targetWindow()->windowIcon();
+                if (!windowIcon.isNull()) {
+                    setIcon(windowIcon);
+                }
+            }
+            if (d->titleLabel && d->titleLabel->text().isEmpty()
+                && !d->targetWindow()->windowTitle().isEmpty()) {
+                setTitle(d->targetWindow()->windowTitle());
+            }
+            connect(d->targetWindow(), &QWidget::windowIconChanged, this, &DTitlebar::setIcon, Qt::UniqueConnection);
+            connect(d->targetWindow(), &QWidget::windowTitleChanged, this, [this](const QString &title) {
+                D_D(DTitlebar);
+                if (!d->embedMode && d->titleLabel) {
+                    d->titleLabel->setText(title);
+                    setProperty("_dtk_title", title);
+                }
+            }, Qt::UniqueConnection);
+        }
+
         d->updateButtonsState(d->targetWindow()->windowFlags());
     } else {
         if (!d->targetWindow()) {
