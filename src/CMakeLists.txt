@@ -2,6 +2,7 @@ if("${QT_VERSION_MAJOR}" STREQUAL "5")
     pkg_check_modules(QGSettings REQUIRED IMPORTED_TARGET gsettings-qt) #Dtk6 removed.
 endif()
 pkg_check_modules(XcbUtil REQUIRED IMPORTED_TARGET xcb-util)
+pkg_check_modules(Xcb REQUIRED IMPORTED_TARGET xcb)
 pkg_check_modules(StartupNotification REQUIRED IMPORTED_TARGET libstartup-notification-1.0)
 pkg_check_modules(Xext REQUIRED IMPORTED_TARGET xext)
 pkg_check_modules(Xi REQUIRED IMPORTED_TARGET xi)
@@ -73,6 +74,7 @@ PRIVATE
     PkgConfig::Xi
     PkgConfig::X11
     PkgConfig::XcbUtil
+    PkgConfig::Xcb
 )
 
 if("${QT_VERSION_MAJOR}" STREQUAL "5")

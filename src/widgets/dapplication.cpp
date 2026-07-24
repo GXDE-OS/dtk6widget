@@ -53,11 +53,13 @@
 
 #ifdef Q_OS_LINUX
 #include "private/startupnotifications/startupnotificationmonitor.h"
+#include "private/dxsettings.h"
 
 #include <DDBusSender>
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
 #include <QGSettings>
 #endif
+#include <QSettings>
 #endif
 
 
@@ -603,6 +605,25 @@ DApplication::DApplication(int &argc, char **argv) :
             QTapAndHoldGesture::setTimeout(gsettings.get("longpress-duration").toInt() - 100);
     }
 #endif
+
+    // Fix icon theme loading on Wayland
+    // On Wayland, QIcon::fromTheme may fail because the icon theme name isn't automatically set.
+    // Read it from XSETTINGS and fall back to qt-theme config.
+    if (DGuiApplicationHelper::testAttribute(DGuiApplicationHelper::IsWaylandPlatform)) {
+        QString iconTheme = DXSettings::xsettingsString(QStringLiteral(
+            "Net/IconThemeName"));
+
+        if (iconTheme.isEmpty()) {
+            QSettings qtSettings(QSettings::IniFormat, QSettings::UserScope,
+                "deepin", "qt-theme");
+            qtSettings.beginGroup("Theme");
+            iconTheme = qtSettings.value("IconThemeName").toString();
+        }
+
+        if (!iconTheme.isEmpty()) {
+            QIcon::setThemeName(iconTheme);
+        }
+    }
 #endif
 
     connect(DGuiApplicationHelper::instance(), SIGNAL(sizeModeChanged(DGuiApplicationHelper::SizeMode)),
