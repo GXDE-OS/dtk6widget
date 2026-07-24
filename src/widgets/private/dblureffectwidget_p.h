@@ -49,6 +49,8 @@ public:
     quint8 getMaskColorAlpha() const;
     QColor getMaskColor(const QColor &baseColor) const;
 
+    void setupWaylandBlur();
+
     void resetSourceImage();
 
     static QMultiHash<QWidget*, const DBlurEffectWidget*> blurEffectWidgetHash;

@@ -4,6 +4,7 @@ endif()
 pkg_check_modules(XcbUtil REQUIRED IMPORTED_TARGET xcb-util)
 pkg_check_modules(Xcb REQUIRED IMPORTED_TARGET xcb)
 pkg_check_modules(StartupNotification REQUIRED IMPORTED_TARGET libstartup-notification-1.0)
+pkg_check_modules(WaylandClient REQUIRED IMPORTED_TARGET wayland-client)
 pkg_check_modules(Xext REQUIRED IMPORTED_TARGET xext)
 pkg_check_modules(Xi REQUIRED IMPORTED_TARGET xi)
 pkg_check_modules(X11 REQUIRED IMPORTED_TARGET x11)
@@ -51,6 +52,7 @@ PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/global>
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
     $<BUILD_INTERFACE:${CONFIG_INCLUDE}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/widgets/wayland-blur>
 INTERFACE
     $<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>
 )
@@ -75,6 +77,7 @@ PRIVATE
     PkgConfig::X11
     PkgConfig::XcbUtil
     PkgConfig::Xcb
+    PkgConfig::WaylandClient
 )
 
 if("${QT_VERSION_MAJOR}" STREQUAL "5")
