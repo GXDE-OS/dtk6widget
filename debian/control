@@ -29,7 +29,8 @@ Build-Depends:
  libdtk6gui-dev,
  libdtkcommon-dev,
  cmake,
- doxygen
+ doxygen,
+ libwayland-dev
 Standards-Version: 3.9.8
 
 Package: libdtk6widget
