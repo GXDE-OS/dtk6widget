@@ -382,7 +382,7 @@ int DFontSizeManager::fontPixelSize(const QFont &font)
     if (px == -1) {
         // font.d->dpi <= 0 is unacceptable,this fallback is to avoid errors.
         // TODO: Remove me if invalid font dpi was fixed
-        const auto fontD = D_PRIVATE_MEMBER(font, QFont_d_tag{});
+        const auto &fontD = D_PRIVATE_MEMBER(font, QFont_d_tag{});
         px = qRound(std::floor(((font.pointSizeF() * (fontD->dpi <= 0 ? d_defaultDpi() : fontD->dpi)) / 72) * 100 + 0.5) / 100);
     }
 
