@@ -1,0 +1,39 @@
+# Maintainer: justforlxz <justforlxz@gmail.com>
+pkgname=dtk6widget-git
+pkgver=6.0.48
+pkgrel=4
+pkgdesc='DTK6 widgets library for graphical user interface development'
+arch=('x86_64' 'aarch64')
+url="https://github.com/GXDE-OS/dtk6widget"
+license=('LGPL-3.0-or-later')
+depends=('dtk6core-git' 'dtk6gui-git' 'dtkcommon-git' 'qt6-base' 'qt6-svg' 'startup-notification'
+         'wayland' 'libx11' 'libxext' 'libxi' 'libxcb' 'xcb-util' 'libgcc' 'libstdc++' 'glibc')
+makedepends=('git' 'cmake' 'ninja' 'qt6-tools')
+provides=("dtk6widget=$pkgver")
+conflicts=('dtk6widget')
+groups=('deepin-git')
+source=()
+sha512sums=()
+
+# 直接使用 PKGBUILD 所在的 git 仓库作为源码 ・ Build from the git checkout this PKGBUILD lives in.
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+build() {
+  cmake -B build -S "$(_srcroot)" -GNinja \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DCMAKE_INSTALL_LIBEXECDIR=lib \
+    -DMKSPECS_INSTALL_DIR=lib/qt6/mkspecs/modules \
+    -DBUILD_PLUGINS=OFF \
+    -DBUILD_EXAMPLES=OFF \
+    -DBUILD_TESTING=OFF \
+    -DBUILD_DOCS=OFF
+  ninja -C build
+}
+
+package() {
+  DESTDIR="$pkgdir" ninja -C build install
+}

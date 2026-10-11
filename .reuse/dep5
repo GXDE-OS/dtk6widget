@@ -39,7 +39,7 @@ Copyright: None
 License: LGPL-3.0-or-later
 
 # Arch
-Files: archlinux/*
+Files: arch/*
 Copyright: None
 License: CC0-1.0
 
