@@ -1,16 +1,17 @@
 # Maintainer: justforlxz <justforlxz@gmail.com>
-pkgname=dtk6widget-git
+pkgname=gxde-dtk6widget
 pkgver=6.0.48
 pkgrel=4
 pkgdesc='DTK6 widgets library for graphical user interface development'
 arch=('x86_64' 'aarch64')
 url="https://github.com/GXDE-OS/dtk6widget"
 license=('LGPL-3.0-or-later')
-depends=('dtk6core-git' 'dtk6gui-git' 'dtkcommon-git' 'qt6-base' 'qt6-svg' 'startup-notification'
+depends=('gxde-dtk6core' 'gxde-dtk6gui' 'gxde-dtkcommon' 'qt6-base' 'qt6-svg' 'startup-notification'
          'wayland' 'libx11' 'libxext' 'libxi' 'libxcb' 'xcb-util' 'libgcc' 'libstdc++' 'glibc')
 makedepends=('git' 'cmake' 'ninja' 'qt6-tools')
-provides=("dtk6widget=$pkgver")
-conflicts=('dtk6widget')
+provides=("dtk6widget=$pkgver" "dtk6widget-git=$pkgver")
+conflicts=('dtk6widget' 'dtk6widget-git')
+replaces=('dtk6widget-git')
 groups=('deepin-git')
 source=()
 sha512sums=()
